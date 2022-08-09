@@ -1,0 +1,35 @@
+- name: Converge
+  hosts: all
+  become: true
+
+  vars:
+    ecr_image_src_dir: "/tmp/test-container/"
+    ecr_image_name: test-alpine
+    ecr_image_buildargs: {test_var: 'ansible'}
+    ecr_push: true
+    docker_install_compose: false
+    pip_install_packages:
+      - docker
+
+  pre_tasks:
+    - name: Copy Docker build source dir into test server.
+      copy:  # noqa 208
+        src: "{{ item }}"
+        dest: /tmp
+      with_items:
+        - test-container
+        - test-container-buildargs
+
+  roles:
+    - role: ansible-role-ecr_container_build
+      vars:
+        ecr_image_src_dir: "/tmp/test-container/"
+        ecr_image_name: test-alpine
+        ecr_push: false
+
+    - role: ansible-role-ecr_container_build
+      vars:
+        ecr_image_src_dir: "/tmp/test-container-buildargs/"
+        ecr_image_name: test-alpine-buildargs
+        ecr_image_buildargs: {test_var: 'ansible'}
+        ecr_push: false

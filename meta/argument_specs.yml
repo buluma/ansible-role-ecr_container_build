@@ -1,0 +1,10 @@
+---
+#
+# Ansible managed
+#
+argument_specs:
+  main:
+    short_description: ECR docker image build and push management role.
+    description: >
+      ECR docker image build and push management role.
+    author: Michael Buluma

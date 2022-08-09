@@ -1,0 +1,13 @@
+---
+- name: prepare
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.pip
+      pip_install_packages:
+        - docker
+        - awscli
+    - role: buluma.docker
