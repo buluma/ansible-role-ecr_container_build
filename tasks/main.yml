@@ -1,6 +1,6 @@
 ---
 
-- name: log into ECR if required.
+- name: Log into ECR if required.
   ansible.builtin.shell: "$(aws ecr get-login --no-include-email --region {{ ecr_region }})"
   tags: ['skip_ansible_lint']
   when: ecr_push or ecr_login_required
@@ -11,7 +11,7 @@
     state: started
   become: true
 
-- name: build image.
+- name: Build image.
   docker_image:
     build:
       path: "{{ ecr_image_src_dir }}"
@@ -22,7 +22,7 @@
     source: build
     tag: "{{ ecr_image_tags.0 }}"
 
-- name: ensure ECR repo exists.
+- name: Ensure ECR repo exists.
   ecs_ecr:
     name: "{{ ecr_image_name }}"
     region: "{{ ecr_region }}"
@@ -30,7 +30,7 @@
     state: present
   when: ecr_push
 
-- name: tag and push the image.
+- name: Tag and push the image.
   include_tasks: tag-and-push.yml
   loop: "{{ ecr_image_tags }}"
   loop_control:
