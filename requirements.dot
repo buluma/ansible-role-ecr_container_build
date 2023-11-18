@@ -1,0 +1,13 @@
+digraph PhiloDilemma {
+  label = "Michael Buluma" ;
+  overlap=false
+  {
+    "ecr_container_build" [fillcolor=yellow style=filled penwidth=3]
+    "buluma.bootstrap" [fillcolor=green style=filled]
+    "buluma.pip" [fillcolor=green style=filled]
+    "buluma.docker" [fillcolor=green style=filled]
+  }
+  "ecr_container_build" -> "buluma.bootstrap"
+  "ecr_container_build" -> "buluma.pip"
+  "ecr_container_build" -> "buluma.docker"
+}
