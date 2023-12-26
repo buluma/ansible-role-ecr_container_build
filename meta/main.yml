@@ -1,11 +1,11 @@
 ---
 galaxy_info:
-  author: geerlingguy
+  author: buluma
   role_name: ecr_container_build
   description: ECR docker image build and push management role.
   company: ShadowNet
   license: Apache-2.0
-  min_ansible_version: "2.4"
+  min_ansible_version: "2.12"
   platforms:
     - name: EL
       versions:

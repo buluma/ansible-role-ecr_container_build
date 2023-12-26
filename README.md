@@ -1,10 +1,10 @@
-# [Ansible role ecr_container_build](#ecr_container_build)
+# Ansible role [ecr_container_build](https://galaxy.ansible.com/ui/standalone/roles/buluma/ecr_container_build/documentation)
 
 ECR docker image build and push management role.
 
-|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-ecr_container_build/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-ecr_container_build/actions/workflows/molecule.yml)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-ecr_container_build/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-ecr_container_build)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/ecr_container_build)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-ecr_container_build.svg)](https://github.com/buluma/ansible-role-ecr_container_build/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-ecr_container_build.svg)](https://github.com/buluma/ansible-role-ecr_container_build/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-ecr_container_build.svg)](https://github.com/buluma/ansible-role-ecr_container_build/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-ecr_container_build/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-ecr_container_build/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-ecr_container_build.svg)](https://github.com/buluma/ansible-role-ecr_container_build/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-ecr_container_build.svg)](https://github.com/buluma/ansible-role-ecr_container_build/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-ecr_container_build.svg)](https://github.com/buluma/ansible-role-ecr_container_build/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/ecr_container_build)](https://galaxy.ansible.com/ui/standalone/roles/buluma/ecr_container_build/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -105,11 +105,11 @@ ecr_url: "{{ ecr_account_id }}.dkr.ecr.{{ ecr_region }}.amazonaws.com"
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
-| Requirement | GitHub | GitLab |
+| Requirement | GitHub | Version |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
-|[buluma.pip](https://galaxy.ansible.com/buluma/pip)|[![Build Status GitHub](https://github.com/buluma/ansible-role-pip/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-pip/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-pip/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-pip)|
-|[buluma.docker](https://galaxy.ansible.com/buluma/docker)|[![Build Status GitHub](https://github.com/buluma/ansible-role-docker/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-docker/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-docker/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-docker)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Ansible Molecule](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-bootstrap.svg)](https://github.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.pip](https://galaxy.ansible.com/buluma/pip)|[![Ansible Molecule](https://github.com/buluma/ansible-role-pip/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-pip/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-pip.svg)](https://github.com/shadowwalker/ansible-role-pip)|
+|[buluma.docker](https://galaxy.ansible.com/buluma/docker)|[![Ansible Molecule](https://github.com/buluma/ansible-role-docker/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-docker/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-docker.svg)](https://github.com/shadowwalker/ansible-role-docker)|
 
 ## [Context](#context)
 
@@ -130,7 +130,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
 
-The minimum version of Ansible required is 2.4, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
@@ -144,14 +144,11 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-ecr_container_build/blob/master/LICENSE).
+[Apache-2.0](https://github.com/buluma/ansible-role-ecr_container_build/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[geerlingguy](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-Please consider [sponsoring me](https://github.com/sponsors/buluma).
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
