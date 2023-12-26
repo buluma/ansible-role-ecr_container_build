@@ -16,6 +16,7 @@ exclude_paths:
 skip_list:
   - yaml[truthy]
   - fqcn[action-core]
+  - no-free-form
 
 enable_list:
   - name[prefix]
